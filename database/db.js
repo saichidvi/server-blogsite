@@ -2,8 +2,8 @@ const mongoose  =  require("mongoose");
 
 
 
-const Connection = async () => {
-    const URL = "mongodb+srv://saichidvi:dkLBJ9Ekd58rfFnX@cluster0.jarq8po.mongodb.net/?retryWrites=true&w=majority";
+const Connection = async (USERNAME,PASSWORD) => {
+    const URL = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.jarq8po.mongodb.net/?retryWrites=true&w=majority`;
     try{
         await  mongoose.connect(URL,{useNewUrlParser : true});
         console.log("Database connected successfully");
